@@ -31,11 +31,11 @@ const PROJECTS = [
       { src: "assets/img/rvc-blanca-moldes-4x3.webp", caption: "Moldes en Illustrator", caption_en: "Patterns in Illustrator" }
     ] },
   { title: "KRC", description: "Jersey y enterito de triatlón y running para KRC (Kalos Running): mockups y moldes en Illustrator listos para sublimación, y prenda final producida.",
-    tags: ["Sublimación", "Moldes", "Illustrator"], image: "assets/img/krc-jersey-mockup-4x3.webp", link: "", instagram: "https://www.instagram.com/kalosrunning/",
+    tags: ["Sublimación", "Moldes", "Illustrator"], image: "assets/img/krc-jersey-mockup-v2-4x3.webp", link: "", instagram: "https://www.instagram.com/kalosrunning/",
     credit: { before: "Diseño de trama: ", after: ". Mockups y moldería: propios.", before_en: "Print design: ", after_en: ". Mockups and patterns: mine.", handle: "@glendamorahan", url: "https://www.instagram.com/glendamorahan/" },
     en: { title: "KRC", description: "Triathlon and running jersey and trisuit for KRC (Kalos Running): mockups and patterns in Illustrator ready for sublimation, plus the final produced garment.", tags: ["Sublimation", "Patterns", "Illustrator"] },
     gallery: [
-      { src: "assets/img/krc-jersey-mockup-4x3.webp", caption: "Mockup del jersey", caption_en: "Jersey mockup" },
+      { src: "assets/img/krc-jersey-mockup-v2-4x3.webp", caption: "Mockup del jersey", caption_en: "Jersey mockup" },
       { src: "assets/img/krc-enterito-mockup-4x3.webp", caption: "Mockup del enterito", caption_en: "Trisuit mockup" },
       { src: "assets/img/krc-foto-bici-4x3.webp", caption: "Equipo KRC con la indumentaria", caption_en: "KRC team wearing the kit" },
       { src: "assets/img/krc-foto-espaldas-4x3.webp", caption: "Prenda final", caption_en: "Final garment" },
@@ -68,7 +68,7 @@ const PROJECTS = [
       { src: "assets/img/max-enterito-4x3.webp", caption: "Enterito", caption_en: "Trisuit" },
       { src: "assets/img/max-carrera-4x3.webp", caption: "Prenda en carrera", caption_en: "Garment in a race" },
       { src: "assets/img/max-bici-4x3.webp", caption: "Prenda final", caption_en: "Final garment" },
-      { src: "assets/img/max-jersey-4x3.webp", caption: "Jersey", caption_en: "Jersey" },
+      { src: "assets/img/max-jersey-v2-4x3.webp", caption: "Jersey", caption_en: "Jersey" },
       { src: "assets/img/max-remera-4x3.webp", caption: "Remera", caption_en: "T-shirt" },
       { src: "assets/img/max-moldes-4x3.webp", caption: "Moldes en Illustrator", caption_en: "Patterns in Illustrator" }
     ] },
