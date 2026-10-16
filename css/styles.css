@@ -65,3 +65,15 @@ footer{padding:2rem 0;text-align:center;color:var(--muted);border-top:1px solid 
 .social:hover,.social:focus-visible{transform:translateY(-3px);box-shadow:var(--shadow)}
 .s-mail:hover{color:#ea4335;border-color:#ea4335}.s-wa:hover{color:#25d366;border-color:#25d366}
 .s-li:hover{color:#0a66c2;border-color:#0a66c2}.s-gh:hover{color:var(--fg);border-color:var(--fg)}
+
+/* Minimalismo: sobre mí, habilidades, archivos */
+.facts{display:grid;gap:0;align-self:start}
+.facts div{display:grid;grid-template-columns:8.5rem 1fr;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--border)}
+.facts div:first-child{border-top:1px solid var(--border)}
+.facts dt{font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);padding-top:.15rem}
+.facts dd{font-weight:500}
+.skills h3{font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:600;padding-bottom:.8rem;border-bottom:1px solid var(--border)}
+.skills .tags{gap:.4rem 1.2rem;margin-top:1rem}
+.skills .tags li{background:none;padding:0;border-radius:0;color:var(--fg);font-size:.95rem;font-weight:400}
+.files{gap:0}.files li{padding:1.2rem 0;border-bottom:1px solid var(--border)}.files li:first-child{border-top:1px solid var(--border)}
+.files h3{font-size:1rem;font-weight:600}.files .muted{font-size:.85rem}
