@@ -20,8 +20,9 @@
       ${media}
       <div class="project-body"><h3>${esc(t.title)}</h3><p>${esc(t.description)}</p>
       <ul class="tags">${t.tags.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
-      ${p.gallery ? `<button class="link project-open" data-idx="${i}">${ui['gal.view']}</button>` : ''}
-      ${p.link ? `<a class="link" href="${esc(p.link)}" target="_blank" rel="noopener">${ui['proj.view']}</a>` : ''}</div>
+      <div class="card-actions">${p.gallery ? `<button class="link project-open" data-idx="${i}">${ui['gal.view']}</button>` : ''}
+      ${p.instagram ? `<a class="social card-ig" href="${esc(p.instagram)}" target="_blank" rel="noopener" aria-label="${esc(ui['proj.ig'] + t.title)}" title="${esc(ui['proj.ig'] + t.title)}"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a>` : ''}
+      ${p.link ? `<a class="link" href="${esc(p.link)}" target="_blank" rel="noopener">${ui['proj.view']}</a>` : ''}</div></div>
     </article>`; }).join('');
   };
   /* Galería (lightbox) */

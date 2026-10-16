@@ -118,3 +118,9 @@ button.project-cycle{cursor:pointer}
 #proyectos .project-img:has(img){aspect-ratio:4/3}
 #proyectos .project-img img{object-fit:cover;object-position:center}
 #proyectos .grid:has(> .project:only-child){grid-template-columns:minmax(0,640px);justify-content:center}
+
+/* Acciones de la tarjeta (galería + Instagram) y tarjetas uniformes */
+.card-actions{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:auto;padding-top:.4rem}
+.card-ig{width:40px;height:40px}
+#proyectos .grid{align-items:stretch}
+.card-actions{height:46px;min-height:0}
