@@ -11,67 +11,68 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
-<script>try{const t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script>try{const t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;if(localStorage.getItem('lang')==='en')document.documentElement.lang='en';}catch(e){}</script>
 </head>
 <body>
-<a class="skip" href="#main">Saltar al contenido</a>
+<a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
 <header class="nav"><div class="container nav-inner">
 <a href="#inicio" class="logo">JJC<span>.</span></a>
-<nav aria-label="Principal"><ul id="menu">
-<li><a href="#sobre-mi">Sobre mí</a></li><li><a href="#experiencia">Experiencia</a></li><li><a href="#proyectos">Trabajos</a></li><li><a href="#habilidades">Habilidades</a></li><li><a href="#archivos">Archivos</a></li><li><a href="#contacto">Contacto</a></li></ul></nav>
-<div class="nav-actions"><button id="theme-toggle" class="icon-btn" aria-label="Cambiar tema claro/oscuro">◐</button>
-<button id="menu-toggle" class="icon-btn menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">☰</button></div>
+<nav aria-label="Principal" data-i18n-aria-label="a.nav"><ul id="menu">
+<li><a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a></li><li><a href="#experiencia" data-i18n="nav.exp">Experiencia</a></li><li><a href="#proyectos" data-i18n="nav.work">Trabajos</a></li><li><a href="#habilidades" data-i18n="nav.skills">Habilidades</a></li><li><a href="#archivos" data-i18n="nav.files">Archivos</a></li><li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li></ul></nav>
+<div class="nav-actions"><button id="lang-toggle" class="icon-btn lang-btn" aria-label="Switch to English" title="Switch to English">EN</button>
+<button id="theme-toggle" class="icon-btn" aria-label="Cambiar tema claro/oscuro" data-i18n-aria-label="a.theme">◐</button>
+<button id="menu-toggle" class="icon-btn menu-btn" aria-label="Abrir menú" data-i18n-aria-label="a.menu" aria-expanded="false" aria-controls="menu">☰</button></div>
 </div></header>
 <main id="main">
 <section id="inicio" class="hero"><div class="container">
-<p class="eyebrow reveal">Hola, soy</p>
+<p class="eyebrow reveal" data-i18n="hero.hi">Hola, soy</p>
 <h1 class="reveal">Juan José Cáceres</h1>
-<h2 class="role reveal">Diseñador Gráfico</h2>
-<p class="lead reveal">Diseño indumentaria y prendas deportivas (remeras, camperas y jerseys) e impresos comerciales como tarjetas y folletos. Basado en Buenos Aires, Argentina.</p>
-<div class="hero-icons reveal"><a class="social" href="#proyectos" aria-label="Ver trabajos" title="Ver trabajos"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="8" cy="11" r="2"/><circle cx="16" cy="11" r="2"/><path d="M10 11h4"/><path d="M6 19l1.5-3h9L18 19"/></svg></a><a class="social" href="assets/docs/CV-Juan-Jose-Caceres.pdf" download aria-label="Descargar CV" title="Descargar CV"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg></a><a class="social" href="https://wa.me/5491133122743" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true" fill="currentColor"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.9.8a3.3 3.3 0 0 0 2.1-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.3-.7-.5z"/></svg></a></div>
+<h2 class="role reveal" data-i18n="hero.role">Diseñador Gráfico</h2>
+<p class="lead reveal" data-i18n="hero.lead">Diseño indumentaria y prendas deportivas (remeras, camperas y jerseys) e impresos comerciales como tarjetas y folletos. Basado en Buenos Aires, Argentina.</p>
+<div class="hero-icons reveal"><a class="social" href="#proyectos" aria-label="Ver trabajos" data-i18n-aria-label="a.work" title="Ver trabajos" data-i18n-title="a.work"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="8" cy="11" r="2"/><circle cx="16" cy="11" r="2"/><path d="M10 11h4"/><path d="M6 19l1.5-3h9L18 19"/></svg></a><a class="social" href="assets/docs/CV-Juan-Jose-Caceres.pdf" download aria-label="Descargar CV" data-i18n-aria-label="a.cv" title="Descargar CV" data-i18n-title="a.cv"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg></a><a class="social" href="https://wa.me/5491133122743" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true" fill="currentColor"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.9.8a3.3 3.3 0 0 0 2.1-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.3-.7-.5z"/></svg></a></div>
 </div></section>
 
 <section id="sobre-mi"><div class="container">
-<h2 class="section-title reveal">Sobre mí</h2>
-<div class="about reveal"><p>Diseñador gráfico con más de 10 años de experiencia. Empecé en Gráfica Espacio diseñando impresos comerciales, pasé cinco años en Cozysport como operador de plotter de impresión y corte, y hoy diseño indumentaria y prendas deportivas para la misma empresa, desde la gráfica hasta el armado de cada pieza lista para producción.</p>
-<dl class="facts"><div><dt>Ubicación</dt><dd>Buenos Aires, Argentina</dd></div><div><dt>Experiencia</dt><dd>+10 años</dd></div><div><dt>Especialidad</dt><dd>Diseño de indumentaria y deportiva</dd></div><div><dt>Idiomas</dt><dd>Español, Inglés</dd></div></dl></div>
+<h2 class="section-title reveal" data-i18n="nav.about">Sobre mí</h2>
+<div class="about reveal"><p data-i18n="about.text">Diseñador gráfico con más de 10 años de experiencia. Empecé en Gráfica Espacio diseñando impresos comerciales, pasé cinco años en Cozysport como operador de plotter de impresión y corte, y hoy diseño indumentaria y prendas deportivas para la misma empresa, desde la gráfica hasta el armado de cada pieza lista para producción.</p>
+<dl class="facts"><div><dt data-i18n="f.loc">Ubicación</dt><dd>Buenos Aires, Argentina</dd></div><div><dt data-i18n="nav.exp">Experiencia</dt><dd data-i18n="f.years">+10 años</dd></div><div><dt data-i18n="f.spec">Especialidad</dt><dd data-i18n="f.specv">Diseño de indumentaria y deportiva</dd></div><div><dt data-i18n="f.lang">Idiomas</dt><dd data-i18n="f.langv">Español, Inglés</dd></div></dl></div>
 </div></section>
 
 <section id="experiencia"><div class="container">
-<h2 class="section-title reveal">Experiencia</h2>
+<h2 class="section-title reveal" data-i18n="nav.exp">Experiencia</h2>
 <ol class="timeline">
-<li class="reveal"><span class="date">2024 — Actualidad</span><h3>Diseñador de Indumentaria · <span>Cozysport</span></h3><p>Diseño de indumentaria y prendas deportivas (remeras, camperas y jerseys), estampados, mockups, armado de cada pieza de la prenda (moldes) listo para impresión y sublimación, y preparación de archivos para producción.</p></li>
-<li class="reveal"><span class="date">2019 — 2024</span><h3>Operador de Plotter de impresión y corte · <span>Cozysport</span></h3><p>Manejo de plotter de impresión y plotter de corte, trabajo con vinilo, preparación de archivos y control de calidad.</p></li>
-<li class="reveal"><span class="date">2014 — 2019</span><h3>Diseñador Gráfico · <span>Gráfica Espacio</span></h3><p>Diseño de piezas gráficas e impresos comerciales: tarjetas personales, folletos y talonarios; preparación de archivos para imprenta.</p></li>
+<li class="reveal"><span class="date" data-i18n="exp.now">2024 — Actualidad</span><h3 data-i18n="exp1.t">Diseñador de Indumentaria · <span>Cozysport</span></h3><p data-i18n="exp1.d">Diseño de indumentaria y prendas deportivas (remeras, camperas y jerseys), estampados, mockups, armado de cada pieza de la prenda (moldes) listo para impresión y sublimación, y preparación de archivos para producción.</p></li>
+<li class="reveal"><span class="date">2019 — 2024</span><h3 data-i18n="exp2.t">Operador de Plotter de impresión y corte · <span>Cozysport</span></h3><p data-i18n="exp2.d">Manejo de plotter de impresión y plotter de corte, trabajo con vinilo, preparación de archivos y control de calidad.</p></li>
+<li class="reveal"><span class="date">2014 — 2019</span><h3 data-i18n="exp3.t">Diseñador Gráfico · <span>Gráfica Espacio</span></h3><p data-i18n="exp3.d">Diseño de piezas gráficas e impresos comerciales: tarjetas personales, folletos y talonarios; preparación de archivos para imprenta.</p></li>
 </ol></div></section>
 
 <section id="proyectos"><div class="container">
-<h2 class="section-title reveal">Trabajos</h2>
-<p class="muted reveal">Selección de trabajos de diseño realizados en la empresa y personales.</p>
+<h2 class="section-title reveal" data-i18n="nav.work">Trabajos</h2>
+<p class="muted reveal" data-i18n="work.sub">Selección de trabajos de diseño realizados en la empresa y personales.</p>
 <div id="projects-grid" class="grid"></div>
 </div></section>
 
 <section id="habilidades"><div class="container">
-<h2 class="section-title reveal">Habilidades</h2>
+<h2 class="section-title reveal" data-i18n="nav.skills">Habilidades</h2>
 <div class="skills">
-<div class="reveal"><h3>Diseño</h3><ul class="tags"><li>Diseño de indumentaria</li><li>Estampados y gráficas para prendas</li><li>Jerseys deportivos</li><li>Mockups</li><li>Diseño de impresos comerciales</li><li>Armado de moldes y piezas de prendas listas para impresión</li></ul></div>
-<div class="reveal"><h3>Herramientas</h3><ul class="tags"><li>Adobe Photoshop</li><li>Adobe Illustrator</li><li>Plotter de impresión y de corte</li></ul></div>
-<div class="reveal"><h3>Blandas</h3><ul class="tags"><li>Creatividad</li><li>Comunicación con clientes</li><li>Trabajo en equipo</li><li>Atención al detalle</li></ul></div>
+<div class="reveal"><h3 data-i18n="sk.design">Diseño</h3><ul class="tags"><li data-i18n="sk.1">Diseño de indumentaria</li><li data-i18n="sk.2">Estampados y gráficas para prendas</li><li data-i18n="sk.3">Jerseys deportivos</li><li>Mockups</li><li data-i18n="sk.5">Diseño de impresos comerciales</li><li data-i18n="sk.6">Armado de moldes y piezas de prendas listas para impresión</li></ul></div>
+<div class="reveal"><h3 data-i18n="sk.tools">Herramientas</h3><ul class="tags"><li>Adobe Photoshop</li><li>Adobe Illustrator</li><li data-i18n="sk.plotter">Plotter de impresión y de corte</li></ul></div>
+<div class="reveal"><h3 data-i18n="sk.soft">Blandas</h3><ul class="tags"><li data-i18n="sk.s1">Creatividad</li><li data-i18n="sk.s2">Comunicación con clientes</li><li data-i18n="sk.s3">Trabajo en equipo</li><li data-i18n="sk.s4">Atención al detalle</li></ul></div>
 </div></div></section>
 
 <section id="archivos"><div class="container">
-<h2 class="section-title reveal">Archivos y documentos</h2>
+<h2 class="section-title reveal" data-i18n="files.title">Archivos y documentos</h2>
 <ul class="files">
-<li class="reveal"><div><h3>Curriculum Vitae</h3><p class="muted">PDF</p></div><a class="link" href="assets/docs/CV-Juan-Jose-Caceres.pdf" download>Descargar ↓</a></li>
+<li class="reveal"><div><h3>Curriculum Vitae</h3><p class="muted">PDF</p></div><a class="link" href="assets/docs/CV-Juan-Jose-Caceres.pdf" download data-i18n="files.dl">Descargar ↓</a></li>
 </ul></div></section>
 
 <section id="contacto"><div class="container center">
-<h2 class="section-title reveal">Contacto</h2>
-<p class="lead reveal">¿Tenés un proyecto o una propuesta? Escribime.</p>
+<h2 class="section-title reveal" data-i18n="nav.contact">Contacto</h2>
+<p class="lead reveal" data-i18n="contact.lead">¿Tenés un proyecto o una propuesta? Escribime.</p>
 <div class="socials reveal"><a class="social s-mail" href="mailto:juanjosecaceres95@gmail.com" aria-label="Email: juanjosecaceres95@gmail.com" title="Email: juanjosecaceres95@gmail.com"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.5l-8 5-8-5V6h16zM4 18V8.9l7.5 4.7a1 1 0 0 0 1 0L20 8.9V18H4z"/></svg></a><a class="social s-wa" href="https://wa.me/5491133122743" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true" fill="currentColor"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.9.8a3.3 3.3 0 0 0 2.1-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.3-.7-.5z"/></svg></a><a class="social s-li" href="https://www.linkedin.com/in/juan-caceres-3677b323b" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a><a class="social s-gh" href="https://github.com/juancjose" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.1.9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg></a></div>
 </div></section>
 </main>
-<a class="wa-float" href="https://wa.me/5491133122743" target="_blank" rel="noopener" aria-label="Escribime por WhatsApp"><svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" fill="currentColor"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.9.8a3.3 3.3 0 0 0 2.1-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.3-.7-.5z"/></svg></a>
-<footer><div class="container">© <span id="year"></span> Juan José Cáceres · Hecho con HTML, CSS y JS</div></footer>
-<script src="js/projects.js"></script><script src="js/main.js"></script>
+<a class="wa-float" href="https://wa.me/5491133122743" target="_blank" rel="noopener" aria-label="Escribime por WhatsApp" data-i18n-aria-label="a.wa"><svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" fill="currentColor"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.9.8a3.3 3.3 0 0 0 2.1-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.3-.7-.5z"/></svg></a>
+<footer><div class="container" data-i18n="footer">© <span id="year"></span> Juan José Cáceres · Hecho con HTML, CSS y JS</div></footer>
+<script src="js/i18n.js"></script><script src="js/projects.js"></script><script src="js/main.js"></script>
 </body></html>

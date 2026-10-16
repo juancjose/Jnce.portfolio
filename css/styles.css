@@ -84,3 +84,6 @@ footer{padding:2rem 0;text-align:center;color:var(--muted);border-top:1px solid 
 /* WhatsApp flotante neutro */
 .wa-float{background:var(--card);color:var(--fg);border:1px solid var(--border)}
 .wa-float:hover{background:var(--fg);color:var(--bg)}
+/* Botón de idioma */
+.lang-btn{border-radius:50%;font-size:.72rem;font-weight:600;letter-spacing:.06em}
+.icon-btn#theme-toggle{border-radius:50%}
