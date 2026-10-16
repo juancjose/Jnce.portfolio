@@ -58,5 +58,14 @@ const PROJECTS = [
       { src: "assets/img/zteam-enterito-manga-corta-4x3.webp", caption: "Enterito manga corta", caption_en: "Short-sleeve trisuit" },
       { src: "assets/img/zteam-enterito-sin-mangas-4x3.webp", caption: "Enterito sin mangas", caption_en: "Sleeveless trisuit" },
       { src: "assets/img/zteam-moldes-4x3.webp", caption: "Moldes en Illustrator", caption_en: "Patterns in Illustrator" }
+    ] },
+  { title: "MAX TRAINING", description: "Indumentaria para MAX TRAINING: enterito, jersey, remera y musculosa.",
+    tags: ["Sublimación", "Mockups"], image: "assets/img/max-enterito-4x3.webp", link: "", instagram: "https://www.instagram.com/maxipassadore/",
+    en: { title: "MAX TRAINING", description: "Apparel for MAX TRAINING: trisuit, jersey, t-shirt and tri top.", tags: ["Sublimation", "Mockups"] },
+    gallery: [
+      { src: "assets/img/max-enterito-4x3.webp", caption: "Enterito", caption_en: "Trisuit" },
+      { src: "assets/img/max-jersey-4x3.webp", caption: "Jersey", caption_en: "Jersey" },
+      { src: "assets/img/max-remera-4x3.webp", caption: "Remera", caption_en: "T-shirt" },
+      { src: "assets/img/max-musculosa-4x3.webp", caption: "Musculosa de triatlón", caption_en: "Tri top" }
     ] }
 ];
