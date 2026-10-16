@@ -1,6 +1,7 @@
 /* Agregá, quitá o editá trabajos acá. Campos: title, description, tags, image (ej. "assets/img/remera.jpg"), link (opcional).
    Para la versión en inglés completá "en" con title, description y tags (si falta, se muestra el español).
    instagram (opcional): link a Instagram, se muestra como ícono redondo.
+   web (opcional): link a un sitio web, se muestra como ícono redondo de globo.
    credit (opcional): línea de crédito con link (ej. diseño de trama de otra persona).
    badge (opcional): etiqueta chica, ej. { es: "Propuesta", en: "Proposal" }.
    gallery (opcional): lista de imágenes { src, caption, caption_en } que se abren en una galería al hacer clic. */
@@ -60,12 +61,15 @@ const PROJECTS = [
       { src: "assets/img/zteam-moldes-4x3.webp", caption: "Moldes en Illustrator", caption_en: "Patterns in Illustrator" }
     ] },
   { title: "MAX TRAINING", description: "Indumentaria para MAX TRAINING: enterito, jersey, remera y musculosa.",
-    tags: ["Sublimación", "Mockups"], image: "assets/img/max-enterito-4x3.webp", link: "", instagram: "https://www.instagram.com/maxipassadore/",
-    en: { title: "MAX TRAINING", description: "Apparel for MAX TRAINING: trisuit, jersey, t-shirt and tri top.", tags: ["Sublimation", "Mockups"] },
+    tags: ["Sublimación", "Moldes", "Mockups"], image: "assets/img/max-enterito-4x3.webp", link: "", web: "https://maxipassadore.com.ar/", instagram: "https://www.instagram.com/maxipassadore/",
+    en: { title: "MAX TRAINING", description: "Apparel for MAX TRAINING: trisuit, jersey, t-shirt and tri top.", tags: ["Sublimation", "Patterns", "Mockups"] },
     gallery: [
       { src: "assets/img/max-enterito-4x3.webp", caption: "Enterito", caption_en: "Trisuit" },
+      { src: "assets/img/max-carrera-4x3.webp", caption: "Prenda en carrera", caption_en: "Garment in a race" },
+      { src: "assets/img/max-bici-4x3.webp", caption: "Prenda final", caption_en: "Final garment" },
       { src: "assets/img/max-jersey-4x3.webp", caption: "Jersey", caption_en: "Jersey" },
       { src: "assets/img/max-remera-4x3.webp", caption: "Remera", caption_en: "T-shirt" },
-      { src: "assets/img/max-musculosa-4x3.webp", caption: "Musculosa de triatlón", caption_en: "Tri top" }
+      { src: "assets/img/max-musculosa-4x3.webp", caption: "Musculosa de triatlón", caption_en: "Tri top" },
+      { src: "assets/img/max-moldes-4x3.webp", caption: "Moldes en Illustrator", caption_en: "Patterns in Illustrator" }
     ] }
 ];
