@@ -16,7 +16,7 @@ const I18N = {
   "nav.contact": "Contact",
   "hero.hi": "Hi, I'm",
   "hero.role": "Graphic Designer",
-  "hero.lead": "I design apparel and sportswear (T-shirts, jackets and jerseys) as well as commercial print such as business cards and flyers. Based in Buenos Aires, Argentina.",
+  "hero.lead": "I design apparel and sportswear, plus commercial print such as business cards and flyers.",
   "about.text": "Graphic designer with over 10 years of experience. I started at Gráfica Espacio designing commercial print, spent five years at Cozysport as a print and cut plotter operator, and today I design apparel and sportswear for the same company, from the graphics to laying out every garment piece ready for production.",
   "f.loc": "Location",
   "f.years": "10+ years",
