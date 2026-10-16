@@ -27,6 +27,21 @@
       ${p.link ? `<a class="link" href="${esc(p.link)}" target="_blank" rel="noopener">${ui['proj.view']}</a>` : ''}</div></div>
     </article>`; }).join('');
   };
+  /* transición suave: fundido cruzado con una capa encima de la foto actual (sin mover el layout) */
+  const reduceMotion = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : { matches: false };
+  const xfade = (base, src, alt) => {
+    const box = base.parentElement;
+    box.querySelectorAll('img.xf').forEach(o => { base.src = o.src; o.remove(); });
+    if (reduceMotion.matches) { base.src = src; base.alt = alt; return; }
+    const ov = new Image(); ov.className = 'xf'; ov.alt = ''; ov.setAttribute('aria-hidden', 'true');
+    const place = () => { ov.style.left = base.offsetLeft + 'px'; ov.style.top = base.offsetTop + 'px'; ov.style.width = base.offsetWidth + 'px'; ov.style.height = base.offsetHeight + 'px'; };
+    ov.onload = ov.onerror = () => {
+      if (!ov.isConnected) return;
+      place(); requestAnimationFrame(() => requestAnimationFrame(() => ov.classList.add('in')));
+      setTimeout(() => { if (ov.isConnected) { base.src = src; base.alt = alt; const done = () => ov.remove(); base.complete ? done() : (base.onload = base.onerror = () => { base.onload = base.onerror = null; done(); }); } }, 430);
+    };
+    box.appendChild(ov); ov.src = src; base.alt = alt;
+  };
   /* Galería (lightbox) */
   const lb2 = document.createElement('div');
   lb2.className = 'lightbox'; lb2.hidden = true; lb2.setAttribute('role', 'dialog'); lb2.setAttribute('aria-modal', 'true');
@@ -35,18 +50,19 @@
   let gal = [], gi = 0, lastFocus = null;
   const show = () => {
     const g = gal[gi], cap = curLang === 'en' && g.caption_en ? g.caption_en : g.caption;
-    lb2.querySelector('img').src = g.src; lb2.querySelector('img').alt = cap;
+    const bi = lb2.querySelector('figure > img:not(.xf)');
+    if (lb2.dataset.open === '1') xfade(bi, g.src, cap); else { bi.src = g.src; bi.alt = cap; lb2.dataset.open = '1'; }
     lb2.querySelector('figcaption').textContent = `${cap} · ${gi + 1}/${gal.length}`;
   };
   const openGal = (idx, start = 0) => { gal = (window.PROJECTS || PROJECTS)[idx].gallery; gi = start; lastFocus = document.activeElement; lb2.hidden = false; document.body.style.overflow = 'hidden'; show(); lb2.querySelector('.lb-close').focus(); };
-  const closeGal = () => { lb2.hidden = true; document.body.style.overflow = ''; if (lastFocus) lastFocus.focus(); };
+  const closeGal = () => { lb2.hidden = true; lb2.dataset.open = ''; lb2.querySelectorAll('img.xf').forEach(o => o.remove()); document.body.style.overflow = ''; if (lastFocus) lastFocus.focus(); };
   const step = d => { gi = (gi + d + gal.length) % gal.length; show(); };
   /* foto de la tarjeta: mitad izquierda = anterior, mitad derecha = siguiente (con fundido, da la vuelta) */
   const go = (c, dir) => {
-    const g = (window.PROJECTS || PROJECTS)[+c.dataset.idx].gallery, pos = (+c.dataset.pos + dir + g.length) % g.length, im = c.querySelector('img');
-    c.dataset.pos = pos; im.style.opacity = 0;
-    const pre = new Image(); pre.src = g[pos].src;
-    setTimeout(() => { im.src = g[pos].src; const cap = curLang === 'en' && g[pos].caption_en ? g[pos].caption_en : g[pos].caption; im.alt = cap; (pre.complete ? Promise.resolve() : new Promise(r => { pre.onload = pre.onerror = r; })).then(() => im.style.opacity = 1); }, 200);
+    const g = (window.PROJECTS || PROJECTS)[+c.dataset.idx].gallery, pos = (+c.dataset.pos + dir + g.length) % g.length, im = c.querySelector('img:not(.xf)');
+    c.dataset.pos = pos;
+    const cap = curLang === 'en' && g[pos].caption_en ? g[pos].caption_en : g[pos].caption;
+    xfade(im, g[pos].src, cap);
     c.querySelectorAll('.dots i').forEach((d, k) => d.classList.toggle('on', k === pos));
   };
   let swiped = false, tx = 0, ty = 0;
@@ -71,7 +87,7 @@
   lb2.querySelector('.lb-close').onclick = closeGal;
   lb2.querySelector('.lb-prev').onclick = () => step(-1);
   lb2.querySelector('.lb-next').onclick = () => step(1);
-  lb2.querySelector('img').addEventListener('click', () => step(1));
+  lb2.querySelector('figure').addEventListener('click', e => { if (e.target.tagName === 'IMG') step(1); });
   lb2.addEventListener('click', e => { if (e.target === lb2) closeGal(); });
   document.addEventListener('keydown', e => {
     if (lb2.hidden) return;

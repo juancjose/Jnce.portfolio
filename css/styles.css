@@ -133,3 +133,9 @@ button.project-cycle{cursor:pointer}
 #proyectos .card-actions{justify-content:flex-start;gap:.5rem}#proyectos .card-actions .card-ig:first-of-type{margin-left:auto}
 .logo{display:inline-flex;align-items:center;color:var(--fg);line-height:0}.logo svg{height:14px;width:auto;display:block}@media (max-width:520px){.logo svg{height:12px}}
 #proyectos .project-body p.subtitle{flex:0;font-size:.85rem;font-style:italic;color:var(--muted);margin-top:-.45rem}
+#proyectos .project-img{position:relative;overflow:hidden}.lightbox figure{position:relative}
+img.xf{position:absolute;opacity:0;transform:scale(1.02);transition:opacity .42s ease,transform .42s ease;pointer-events:none;object-fit:contain;object-position:center;margin:0;max-width:none;max-height:none}
+#proyectos .project-img img.xf{object-fit:cover}
+img.xf.in{opacity:1;transform:none}
+#proyectos .project-img img:not(.xf){transition:none}
+@media (prefers-reduced-motion:reduce){img.xf{transition:none}}
