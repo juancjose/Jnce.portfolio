@@ -60,16 +60,15 @@ const PROJECTS = [
       { src: "assets/img/zteam-enterito-sin-mangas-4x3.webp", caption: "Enterito sin mangas", caption_en: "Sleeveless trisuit" },
       { src: "assets/img/zteam-moldes-4x3.webp", caption: "Moldes en Illustrator", caption_en: "Patterns in Illustrator" }
     ] },
-  { title: "MAX TRAINING", description: "Indumentaria para MAX TRAINING: enterito, jersey, remera y musculosa.",
+  { title: "MAX TRAINING", description: "Indumentaria para MAX TRAINING: enterito, jersey y remera.",
     tags: ["Sublimación", "Moldes", "Mockups"], image: "assets/img/max-enterito-4x3.webp", link: "", web: "https://maxipassadore.com.ar/", instagram: "https://www.instagram.com/maxipassadore/",
-    en: { title: "MAX TRAINING", description: "Apparel for MAX TRAINING: trisuit, jersey, t-shirt and tri top.", tags: ["Sublimation", "Patterns", "Mockups"] },
+    en: { title: "MAX TRAINING", description: "Apparel for MAX TRAINING: trisuit, jersey and t-shirt.", tags: ["Sublimation", "Patterns", "Mockups"] },
     gallery: [
       { src: "assets/img/max-enterito-4x3.webp", caption: "Enterito", caption_en: "Trisuit" },
       { src: "assets/img/max-carrera-4x3.webp", caption: "Prenda en carrera", caption_en: "Garment in a race" },
       { src: "assets/img/max-bici-4x3.webp", caption: "Prenda final", caption_en: "Final garment" },
       { src: "assets/img/max-jersey-4x3.webp", caption: "Jersey", caption_en: "Jersey" },
       { src: "assets/img/max-remera-4x3.webp", caption: "Remera", caption_en: "T-shirt" },
-      { src: "assets/img/max-musculosa-4x3.webp", caption: "Musculosa de triatlón", caption_en: "Tri top" },
       { src: "assets/img/max-moldes-4x3.webp", caption: "Moldes en Illustrator", caption_en: "Patterns in Illustrator" }
     ] }
 ];
