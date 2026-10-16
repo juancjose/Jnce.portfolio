@@ -2,7 +2,7 @@
 
 **Diseñador gráfico · Indumentaria y deportiva**
 
-![CHIMANTEAM — mockup de enterito deportivo sublimado](assets/img/chimanteam%20mockup.webp)
+![CHIMANTEAM — mockup de enterito deportivo sublimado](assets/img/chimanteam-mockup-4x3.webp)
 
 ## Sobre mí
 
