@@ -57,8 +57,6 @@ const PROJECTS = [
     gallery: [
       { src: "assets/img/zteam-enterito-manga-corta-4x3.webp", caption: "Enterito manga corta", caption_en: "Short-sleeve trisuit" },
       { src: "assets/img/zteam-enterito-sin-mangas-4x3.webp", caption: "Enterito sin mangas", caption_en: "Sleeveless trisuit" },
-      { src: "assets/img/zteam-foto-espalda-v2-4x3.webp", caption: "Foto del cliente (espalda)", caption_en: "Client photo (back)" },
-      { src: "assets/img/zteam-foto-frente-4x3.webp", caption: "Foto del cliente (frente)", caption_en: "Client photo (front)" },
       { src: "assets/img/zteam-moldes-4x3.webp", caption: "Moldes en Illustrator", caption_en: "Patterns in Illustrator" }
     ] }
 ];
