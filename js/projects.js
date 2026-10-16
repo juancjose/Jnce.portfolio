@@ -50,5 +50,12 @@ const PROJECTS = [
       { src: "assets/img/brida-chaleco-4x3.webp", caption: "Chaleco", caption_en: "Vest" },
       { src: "assets/img/brida-campera-4x3.webp", caption: "Campera", caption_en: "Jacket" },
       { src: "assets/img/brida-campera-2-4x3.webp", caption: "Campera (versión 2)", caption_en: "Jacket (version 2)" }
+    ] },
+  { title: "Z TEAM", description: "Enteritos de triatlón para Z TEAM (Jeremías Chinque): manga corta y sin mangas.",
+    tags: ["Sublimación", "Mockups"], image: "assets/img/zteam-enterito-manga-corta-4x3.webp", link: "", instagram: "https://www.instagram.com/chinquejeremias/",
+    en: { title: "Z TEAM", description: "Triathlon trisuits for Z TEAM (Jeremías Chinque): short-sleeve and sleeveless.", tags: ["Sublimation", "Mockups"] },
+    gallery: [
+      { src: "assets/img/zteam-enterito-manga-corta-4x3.webp", caption: "Enterito manga corta", caption_en: "Short-sleeve trisuit" },
+      { src: "assets/img/zteam-enterito-sin-mangas-4x3.webp", caption: "Enterito sin mangas", caption_en: "Sleeveless trisuit" }
     ] }
 ];
