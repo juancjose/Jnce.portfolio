@@ -78,11 +78,9 @@ footer{padding:2rem 0;text-align:center;color:var(--muted);border-top:1px solid 
 .files{gap:0}.files li{padding:1.2rem 0;border-bottom:1px solid var(--border)}.files li:first-child{border-top:1px solid var(--border)}
 .files h3{font-size:1rem;font-weight:600}.files .muted{font-size:.85rem}
 
-/* Botones del inicio (unificados) */
-.hero-cta{display:grid;grid-template-columns:repeat(3,160px);gap:.75rem;margin-top:2.2rem}
-.hbtn{display:flex;align-items:center;justify-content:center;height:44px;border:1px solid color-mix(in srgb,var(--fg) 35%,transparent);border-radius:8px;background:transparent;color:var(--fg);font-size:.9rem;font-weight:500;letter-spacing:.01em;transition:background .2s,color .2s,border-color .2s}
-.hbtn:hover,.hbtn:focus-visible{background:var(--fg);color:var(--bg);border-color:var(--fg)}
-@media (max-width:560px){.hero-cta{grid-template-columns:1fr 1fr}.hbtn:last-child{grid-column:1/-1}}
+/* Botones del inicio como iconos */
+.hero-icons{display:flex;gap:1rem;margin-top:2.2rem}
+.hero-icons .social:hover,.hero-icons .social:focus-visible{color:var(--fg);border-color:var(--fg)}
 /* WhatsApp flotante neutro */
 .wa-float{background:var(--card);color:var(--fg);border:1px solid var(--border)}
 .wa-float:hover{background:var(--fg);color:var(--bg)}
