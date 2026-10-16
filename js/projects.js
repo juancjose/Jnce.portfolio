@@ -80,7 +80,6 @@ const PROJECTS = [
       { src: "assets/img/zr-mockup-4x3.webp", caption: "Mockup del jersey", caption_en: "Jersey mockup" },
       { src: "assets/img/zr-grupo-4x3.webp", caption: "El equipo con la prenda final", caption_en: "The team in the final garment" },
       { src: "assets/img/zr-grupo-nubes-4x3.webp", caption: "El equipo en ruta", caption_en: "The team on the road" },
-      { src: "assets/img/zr-photoshop-4x3.webp", caption: "Diseño en Photoshop", caption_en: "Design in Photoshop" },
       { src: "assets/img/zr-moldes-4x3.webp", caption: "Moldes en Illustrator", caption_en: "Patterns in Illustrator" }
     ] }
 ];
