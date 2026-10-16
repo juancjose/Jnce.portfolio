@@ -14,7 +14,7 @@ assets/img/         Imágenes de proyectos
 ```
 
 ## Cómo editar
-1. Buscá `[EDITAR]` en `index.html` y reemplazá con tus datos (rol, intro, experiencia, habilidades, email, WhatsApp).
+1. Buscá `[EDITAR]` en `index.html` y reemplazá con tus datos (rol, intro, experiencia, habilidades, email, WhatsApp, LinkedIn).
 2. **Trabajos:** editá el array `PROJECTS` en `js/projects.js`:
    ```js
    { title: "Mi proyecto", description: "Qué hace", tags: ["React"], image: "assets/img/proyecto.png", link: "https://..." }
