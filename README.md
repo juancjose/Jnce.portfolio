@@ -1,4 +1,4 @@
-# Portfolio — Juan José Cáceres
+# Portfolio — Juan José Cáceres · Diseñador Gráfico
 
 Sitio estático (HTML + CSS + JS, sin build). Abrí `index.html` en el navegador para verlo.
 
@@ -6,20 +6,20 @@ Sitio estático (HTML + CSS + JS, sin build). Abrí `index.html` en el navegador
 ```
 index.html          Contenido principal
 css/styles.css      Estilos (colores en :root y [data-theme=dark])
-js/projects.js      Lista de proyectos (editar acá)
+js/projects.js      Lista de trabajos (editar acá)
 js/main.js          Tema claro/oscuro, menú, animaciones
-assets/docs/        PDFs descargables (CV, certificados)
+assets/docs/        PDFs descargables (CV, presentaciones)
 assets/img/         Imágenes de proyectos
 .nojekyll           Para GitHub Pages
 ```
 
 ## Cómo editar
 1. Buscá `[EDITAR]` en `index.html` y reemplazá con tus datos (rol, intro, experiencia, habilidades, email, LinkedIn).
-2. **Proyectos:** editá el array `PROJECTS` en `js/projects.js`:
+2. **Trabajos:** editá el array `PROJECTS` en `js/projects.js`:
    ```js
    { title: "Mi proyecto", description: "Qué hace", tags: ["React"], image: "assets/img/proyecto.png", link: "https://..." }
    ```
-3. **Archivos:** copiá tus PDFs a `assets/docs/` con los nombres usados en `index.html` (ej. `CV-Juan-Jose-Caceres.pdf`) o cambiá los `href`.
+3. **Archivos:** copiá tus PDFs a `assets/docs/` con los nombres usados en `index.html` (ej. `CV-Juan-Jose-Caceres.pdf`, `presentacion.pdf`) o cambiá los `href`.
 4. **Colores:** cambiá `--accent` y `--accent2` en `css/styles.css`.
 
 ## Publicar con GitHub Pages

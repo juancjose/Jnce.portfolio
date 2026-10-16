@@ -1,6 +1,7 @@
-/* Agregá, quitá o editá proyectos acá. Campos: title, description, tags, image (opcional), link (opcional) */
+/* Agregá, quitá o editá trabajos acá. Campos: title, description, tags, image (ej. "assets/img/marca.jpg"), link (opcional) */
 const PROJECTS = [
-  { title: "[EDITAR] Sistema de gestión interna", description: "[EDITAR] Plataforma para automatizar procesos del área X, reduciendo tiempos en un 40%.", tags: ["JavaScript", "Node.js", "SQL"], image: "", link: "#" },
-  { title: "[EDITAR] Dashboard de métricas", description: "[EDITAR] Tablero de indicadores en tiempo real para la dirección.", tags: ["Power BI", "Python"], image: "", link: "#" },
-  { title: "[EDITAR] Sitio web corporativo", description: "[EDITAR] Rediseño del sitio institucional, responsive y optimizado para SEO.", tags: ["HTML", "CSS", "UX"], image: "", link: "#" }
+  { title: "[EDITAR] Identidad visual para marca", description: "[EDITAR] Logo, paleta, tipografías y manual de marca.", tags: ["Branding", "Illustrator"], image: "", link: "" },
+  { title: "[EDITAR] Diseño editorial", description: "[EDITAR] Catálogo / revista / folleto diagramado.", tags: ["Editorial", "InDesign"], image: "", link: "" },
+  { title: "[EDITAR] Campaña para redes sociales", description: "[EDITAR] Piezas para Instagram y otras redes.", tags: ["Redes sociales", "Photoshop"], image: "", link: "" },
+  { title: "[EDITAR] Packaging / piezas gráficas", description: "[EDITAR] Descripción breve del trabajo.", tags: ["Figma", "Photoshop"], image: "", link: "" }
 ];
