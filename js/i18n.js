@@ -9,7 +9,8 @@ const I18N = {
   "gal.view": "Ver galería →",
   "gal.close": "Cerrar",
   "gal.prev": "Anterior",
-  "gal.next": "Siguiente"
+  "gal.next": "Siguiente",
+  "gal.nextphoto": "Siguiente foto"
  },
  "en": {
   "skip": "Skip to content",
@@ -70,6 +71,7 @@ const I18N = {
   "gal.view": "View gallery →",
   "gal.close": "Close",
   "gal.prev": "Previous",
-  "gal.next": "Next"
+  "gal.next": "Next",
+  "gal.nextphoto": "Next photo"
  }
 };

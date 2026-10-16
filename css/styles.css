@@ -101,3 +101,15 @@ button.project-img{border:0;padding:0;width:100%;cursor:zoom-in;background:var(-
 .lightbox button:hover,.lightbox button:focus-visible{background:#fff;color:#0b0f19}
 .lb-close{position:absolute;top:1.2rem;right:1.2rem}
 @media (max-width:600px){.lb-prev,.lb-next{position:absolute;bottom:1.2rem}.lb-prev{left:30%}.lb-next{right:30%}}
+
+/* Fotos centradas (sin recorte) y clic para pasar */
+#proyectos .project-img:has(img){background:var(--bg2);position:relative}
+#proyectos .project-img img{object-fit:contain;object-position:center;transition:opacity .2s ease}
+#proyectos .project:hover .project-img img{transform:none}
+button.project-cycle{cursor:pointer}
+.dots{position:absolute;left:50%;bottom:.8rem;transform:translateX(-50%);display:flex;gap:6px}
+.dots i{width:6px;height:6px;border-radius:50%;background:var(--muted);opacity:.45;transition:opacity .2s,background .2s}
+.dots i.on{opacity:1;background:var(--fg)}
+.lightbox img{object-fit:contain;cursor:pointer}
+#proyectos .project-img:has(img) img{position:absolute;inset:0;width:100%;height:100%}
+.dots{z-index:1;padding:4px 7px;border-radius:999px;background:color-mix(in srgb,var(--bg) 55%,transparent)}

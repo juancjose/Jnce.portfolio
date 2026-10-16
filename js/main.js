@@ -13,7 +13,8 @@
     grid.innerHTML = (window.PROJECTS || PROJECTS).map((p, i) => {
       const t = lang === 'en' && p.en ? { ...p, ...p.en } : p;
       const img = p.image ? `<img src="${esc(p.image)}" alt="${esc(ui['proj.alt'] + t.title)}" loading="lazy">` : esc(t.title.slice(0,1));
-      const media = p.gallery ? `<button class="project-img project-open" data-idx="${i}" aria-label="${esc(ui['gal.open'] + t.title)}">${img}</button>` : `<div class="project-img">${img}</div>`;
+      const dots = p.gallery ? `<span class="dots" aria-hidden="true">${p.gallery.map((_, k) => `<i${k ? '' : ' class="on"'}></i>`).join('')}</span>` : '';
+      const media = p.gallery ? `<button class="project-img project-cycle" data-idx="${i}" data-pos="0" aria-label="${esc(ui['gal.nextphoto'])}">${img}${dots}</button>` : `<div class="project-img">${img}</div>`;
       return `
     <article class="card project reveal visible">
       ${media}
@@ -34,13 +35,26 @@
     lb2.querySelector('img').src = g.src; lb2.querySelector('img').alt = cap;
     lb2.querySelector('figcaption').textContent = `${cap} · ${gi + 1}/${gal.length}`;
   };
-  const openGal = idx => { gal = (window.PROJECTS || PROJECTS)[idx].gallery; gi = 0; lastFocus = document.activeElement; lb2.hidden = false; document.body.style.overflow = 'hidden'; show(); lb2.querySelector('.lb-close').focus(); };
+  const openGal = (idx, start = 0) => { gal = (window.PROJECTS || PROJECTS)[idx].gallery; gi = start; lastFocus = document.activeElement; lb2.hidden = false; document.body.style.overflow = 'hidden'; show(); lb2.querySelector('.lb-close').focus(); };
   const closeGal = () => { lb2.hidden = true; document.body.style.overflow = ''; if (lastFocus) lastFocus.focus(); };
   const step = d => { gi = (gi + d + gal.length) % gal.length; show(); };
-  grid.addEventListener('click', e => { const b = e.target.closest('.project-open'); if (b) openGal(+b.dataset.idx); });
+  grid.addEventListener('click', e => {
+    const c = e.target.closest('.project-cycle');
+    if (c) { /* clic en la foto: pasa a la siguiente (con fundido) */
+      const g = (window.PROJECTS || PROJECTS)[+c.dataset.idx].gallery, pos = (+c.dataset.pos + 1) % g.length, im = c.querySelector('img');
+      c.dataset.pos = pos; im.style.opacity = 0;
+      const pre = new Image(); pre.src = g[pos].src;
+      setTimeout(() => { im.src = g[pos].src; const cap = curLang === 'en' && g[pos].caption_en ? g[pos].caption_en : g[pos].caption; im.alt = cap; (pre.complete ? Promise.resolve() : new Promise(r => { pre.onload = pre.onerror = r; })).then(() => im.style.opacity = 1); }, 200);
+      c.querySelectorAll('.dots i').forEach((d, k) => d.classList.toggle('on', k === pos));
+      return;
+    }
+    const b = e.target.closest('.project-open');
+    if (b) { const card = b.closest('.project').querySelector('.project-cycle'); openGal(+b.dataset.idx, card ? +card.dataset.pos : 0); }
+  });
   lb2.querySelector('.lb-close').onclick = closeGal;
   lb2.querySelector('.lb-prev').onclick = () => step(-1);
   lb2.querySelector('.lb-next').onclick = () => step(1);
+  lb2.querySelector('img').addEventListener('click', () => step(1));
   lb2.addEventListener('click', e => { if (e.target === lb2) closeGal(); });
   document.addEventListener('keydown', e => {
     if (lb2.hidden) return;
