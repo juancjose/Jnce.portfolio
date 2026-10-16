@@ -43,7 +43,7 @@ const PROJECTS = [
     ] },
   { title: "BRIDA TRAINING", badge: { es: "Propuesta", en: "Proposal" },
     description: "Propuesta de indumentaria para el equipo de entrenamiento BRIDA TRAINING: jersey, chaleco y camperas.",
-    tags: ["Sublimación", "Mockups"], image: "assets/img/brida-jersey-4x3.webp", link: "",
+    tags: ["Sublimación", "Mockups"], image: "assets/img/brida-jersey-4x3.webp", link: "", instagram: "https://www.instagram.com/brida.training/",
     en: { title: "BRIDA TRAINING", description: "Apparel proposal for the BRIDA TRAINING team: jersey, vest and jackets.", tags: ["Sublimation", "Mockups"] },
     gallery: [
       { src: "assets/img/brida-jersey-4x3.webp", caption: "Jersey", caption_en: "Jersey" },
