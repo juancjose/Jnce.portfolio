@@ -2,6 +2,7 @@
    Para la versión en inglés completá "en" con title, description y tags (si falta, se muestra el español).
    instagram (opcional): link a Instagram, se muestra como ícono redondo.
    credit (opcional): línea de crédito con link (ej. diseño de trama de otra persona).
+   badge (opcional): etiqueta chica, ej. { es: "Propuesta", en: "Proposal" }.
    gallery (opcional): lista de imágenes { src, caption, caption_en } que se abren en una galería al hacer clic. */
 const PROJECTS = [
   { title: "CHIMANTEAM", description: "Indumentaria sublimada para CHIMANTEAM: enterito y remeras, con diseño del mockup y armado de cada pieza de la prenda lista para impresión.",
@@ -39,5 +40,15 @@ const PROJECTS = [
       { src: "assets/img/krc-foto-detalle-4x3.webp", caption: "Detalle de la prenda", caption_en: "Garment detail" },
       { src: "assets/img/krc-jersey-moldes-4x3.webp", caption: "Moldes del jersey en Illustrator", caption_en: "Jersey patterns in Illustrator" },
       { src: "assets/img/krc-enterito-moldes-4x3.webp", caption: "Moldes del enterito en Illustrator", caption_en: "Trisuit patterns in Illustrator" }
+    ] },
+  { title: "BRIDA TRAINING", badge: { es: "Propuesta", en: "Proposal" },
+    description: "Propuesta de indumentaria para el equipo de entrenamiento BRIDA TRAINING: jersey, chaleco y camperas.",
+    tags: ["Sublimación", "Mockups"], image: "assets/img/brida-jersey-4x3.webp", link: "",
+    en: { title: "BRIDA TRAINING", description: "Apparel proposal for the BRIDA TRAINING team: jersey, vest and jackets.", tags: ["Sublimation", "Mockups"] },
+    gallery: [
+      { src: "assets/img/brida-jersey-4x3.webp", caption: "Jersey", caption_en: "Jersey" },
+      { src: "assets/img/brida-chaleco-4x3.webp", caption: "Chaleco", caption_en: "Vest" },
+      { src: "assets/img/brida-campera-4x3.webp", caption: "Campera", caption_en: "Jacket" },
+      { src: "assets/img/brida-campera-2-4x3.webp", caption: "Campera (versión 2)", caption_en: "Jacket (version 2)" }
     ] }
 ];
