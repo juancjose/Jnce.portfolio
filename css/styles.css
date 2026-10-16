@@ -77,3 +77,10 @@ footer{padding:2rem 0;text-align:center;color:var(--muted);border-top:1px solid 
 .skills .tags li{background:none;padding:0;border-radius:0;color:var(--fg);font-size:.95rem;font-weight:400}
 .files{gap:0}.files li{padding:1.2rem 0;border-bottom:1px solid var(--border)}.files li:first-child{border-top:1px solid var(--border)}
 .files h3{font-size:1rem;font-weight:600}.files .muted{font-size:.85rem}
+
+/* Botones del inicio */
+.hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem;margin-top:2.2rem}
+.hbtn{display:inline-flex;align-items:center;gap:.45rem;height:42px;padding:0 1.2rem;border-radius:8px;font-size:.9rem;font-weight:500;letter-spacing:.01em;border:1px solid transparent;transition:background .2s,color .2s,border-color .2s,opacity .2s}
+.hbtn-primary{background:var(--fg);color:var(--bg)}.hbtn-primary:hover{opacity:.85}
+.hbtn-outline{border-color:var(--border);color:var(--fg)}.hbtn-outline:hover{border-color:var(--fg)}
+.hbtn-text{color:var(--muted);padding:0 .6rem}.hbtn-text:hover{color:var(--fg)}
