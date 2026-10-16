@@ -1,7 +1,6 @@
 /* Agregá, quitá o editá trabajos acá. Campos: title, description, tags, image (ej. "assets/img/remera.jpg"), link (opcional) */
 const PROJECTS = [
-  { title: "[EDITAR] Remeras", description: "[EDITAR] Diseño y estampado de remeras para marca / cliente.", tags: ["Estampado", "Illustrator", "Mockups"], image: "", link: "" },
-  { title: "[EDITAR] Camperas", description: "[EDITAR] Diseño de camperas: gráficas, bordados y detalles.", tags: ["Indumentaria", "Photoshop"], image: "", link: "" },
-  { title: "[EDITAR] Jerseys deportivos", description: "[EDITAR] Camisetas para equipo / club, sublimación y numeración.", tags: ["Deportiva", "Sublimación", "Illustrator"], image: "", link: "" },
-  { title: "[EDITAR] Colección", description: "[EDITAR] Colección completa: concepto, paleta y prendas.", tags: ["Colección", "Mockups", "Figma"], image: "", link: "" }
+  { title: "Remeras", description: "Diseño de gráficas y estampados para remeras, con mockups y archivos listos para producción.", tags: ["Estampados", "Mockups"], image: "", link: "" },
+  { title: "Camperas", description: "Diseño de camperas con armado de cada pieza de la prenda (moldes) listo para impresión.", tags: ["Indumentaria", "Moldes"], image: "", link: "" },
+  { title: "Jerseys deportivos", description: "Diseño de jerseys deportivos preparados para impresión y sublimación.", tags: ["Deportiva", "Sublimación"], image: "", link: "" }
 ];
