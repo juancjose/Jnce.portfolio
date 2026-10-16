@@ -11,7 +11,7 @@ const I18N = {
   "gal.close": "Cerrar",
   "gal.prev": "Anterior",
   "gal.next": "Siguiente",
-  "gal.nextphoto": "Siguiente foto"
+  "gal.nextphoto": "Fotos: clic a la izquierda para la anterior, a la derecha para la siguiente"
  },
  "en": {
   "skip": "Skip to content",
@@ -74,6 +74,6 @@ const I18N = {
   "gal.close": "Close",
   "gal.prev": "Previous",
   "gal.next": "Next",
-  "gal.nextphoto": "Next photo"
+  "gal.nextphoto": "Photos: click left for previous, right for next"
  }
 };

@@ -40,15 +40,29 @@
   const openGal = (idx, start = 0) => { gal = (window.PROJECTS || PROJECTS)[idx].gallery; gi = start; lastFocus = document.activeElement; lb2.hidden = false; document.body.style.overflow = 'hidden'; show(); lb2.querySelector('.lb-close').focus(); };
   const closeGal = () => { lb2.hidden = true; document.body.style.overflow = ''; if (lastFocus) lastFocus.focus(); };
   const step = d => { gi = (gi + d + gal.length) % gal.length; show(); };
+  /* foto de la tarjeta: mitad izquierda = anterior, mitad derecha = siguiente (con fundido, da la vuelta) */
+  const go = (c, dir) => {
+    const g = (window.PROJECTS || PROJECTS)[+c.dataset.idx].gallery, pos = (+c.dataset.pos + dir + g.length) % g.length, im = c.querySelector('img');
+    c.dataset.pos = pos; im.style.opacity = 0;
+    const pre = new Image(); pre.src = g[pos].src;
+    setTimeout(() => { im.src = g[pos].src; const cap = curLang === 'en' && g[pos].caption_en ? g[pos].caption_en : g[pos].caption; im.alt = cap; (pre.complete ? Promise.resolve() : new Promise(r => { pre.onload = pre.onerror = r; })).then(() => im.style.opacity = 1); }, 200);
+    c.querySelectorAll('.dots i').forEach((d, k) => d.classList.toggle('on', k === pos));
+  };
+  let swiped = false, tx = 0, ty = 0;
+  grid.addEventListener('touchstart', e => { if (e.target.closest('.project-cycle')) { tx = e.touches[0].clientX; ty = e.touches[0].clientY; } }, { passive: true });
+  grid.addEventListener('touchend', e => {
+    const c = e.target.closest('.project-cycle'); if (!c) return;
+    const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) { swiped = true; go(c, dx < 0 ? 1 : -1); setTimeout(() => swiped = false, 400); }
+  });
+  grid.addEventListener('mousemove', e => { const c = e.target.closest('.project-cycle'); if (c) { const r = c.getBoundingClientRect(); c.style.cursor = e.clientX - r.left < r.width / 2 ? 'w-resize' : 'e-resize'; } });
+  grid.addEventListener('keydown', e => { const c = e.target.closest('.project-cycle'); if (c && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) { e.preventDefault(); go(c, e.key === 'ArrowLeft' ? -1 : 1); } });
   grid.addEventListener('click', e => {
     const c = e.target.closest('.project-cycle');
-    if (c) { /* clic en la foto: pasa a la siguiente (con fundido) */
-      const g = (window.PROJECTS || PROJECTS)[+c.dataset.idx].gallery, pos = (+c.dataset.pos + 1) % g.length, im = c.querySelector('img');
-      c.dataset.pos = pos; im.style.opacity = 0;
-      const pre = new Image(); pre.src = g[pos].src;
-      setTimeout(() => { im.src = g[pos].src; const cap = curLang === 'en' && g[pos].caption_en ? g[pos].caption_en : g[pos].caption; im.alt = cap; (pre.complete ? Promise.resolve() : new Promise(r => { pre.onload = pre.onerror = r; })).then(() => im.style.opacity = 1); }, 200);
-      c.querySelectorAll('.dots i').forEach((d, k) => d.classList.toggle('on', k === pos));
-      return;
+    if (c) {
+      if (swiped) return;
+      if (e.detail === 0) { go(c, 1); return; } /* teclado (Enter/Espacio): siguiente */
+      const r = c.getBoundingClientRect(); go(c, e.clientX - r.left < r.width / 2 ? -1 : 1); return;
     }
     const b = e.target.closest('.project-open');
     if (b) { const card = b.closest('.project').querySelector('.project-cycle'); openGal(+b.dataset.idx, card ? +card.dataset.pos : 0); }
