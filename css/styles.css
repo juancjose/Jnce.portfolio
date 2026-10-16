@@ -58,3 +58,10 @@ footer{padding:2rem 0;text-align:center;color:var(--muted);border-top:1px solid 
 .btn.whatsapp{background:#25d366;border-color:#25d366;color:#fff}
 .wa-float{position:fixed;right:20px;bottom:20px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px -6px rgba(0,0,0,.45);transition:transform .2s}
 .wa-float:hover{transform:scale(1.08)}
+
+/* Contacto minimalista */
+.socials{display:flex;justify-content:center;gap:1.2rem;margin-top:2rem}
+.social{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--border);background:var(--card);color:var(--muted);transition:transform .2s,color .2s,border-color .2s,box-shadow .2s}
+.social:hover,.social:focus-visible{transform:translateY(-3px);box-shadow:var(--shadow)}
+.s-mail:hover{color:#ea4335;border-color:#ea4335}.s-wa:hover{color:#25d366;border-color:#25d366}
+.s-li:hover{color:#0a66c2;border-color:#0a66c2}.s-gh:hover{color:var(--fg);border-color:var(--fg)}
