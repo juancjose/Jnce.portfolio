@@ -1,6 +1,7 @@
 /* Agregá, quitá o editá trabajos acá. Campos: title, description, tags, image (ej. "assets/img/remera.jpg"), link (opcional).
    Para la versión en inglés completá "en" con title, description y tags (si falta, se muestra el español).
    instagram (opcional): link a Instagram, se muestra como ícono redondo.
+   subtitle (opcional): línea corta bajo el título (también en en.subtitle).
    web (opcional): link a un sitio web, se muestra como ícono redondo de globo.
    credit (opcional): línea de crédito con link (ej. diseño de trama de otra persona).
    badge (opcional): etiqueta chica, ej. { es: "Propuesta", en: "Proposal" }.
@@ -70,5 +71,14 @@ const PROJECTS = [
       { src: "assets/img/max-jersey-4x3.webp", caption: "Jersey", caption_en: "Jersey" },
       { src: "assets/img/max-remera-4x3.webp", caption: "Remera", caption_en: "T-shirt" },
       { src: "assets/img/max-moldes-4x3.webp", caption: "Moldes en Illustrator", caption_en: "Patterns in Illustrator" }
+    ] },
+  { title: "ZR RIDING CLUB", subtitle: "Edición especial: De la Puna a las Yungas",
+    description: "Jersey de ciclismo edición especial para ZR RIDING CLUB: mockup en Photoshop y moldes listos para sublimación.",
+    tags: ["Sublimación", "Moldes", "Mockups"], image: "assets/img/zr-mockup-4x3.webp", link: "",
+    en: { title: "ZR RIDING CLUB", subtitle: "Special edition: De la Puna a las Yungas", description: "Special-edition cycling jersey for ZR RIDING CLUB: mockup in Photoshop and patterns ready for sublimation.", tags: ["Sublimation", "Patterns", "Mockups"] },
+    gallery: [
+      { src: "assets/img/zr-mockup-4x3.webp", caption: "Mockup del jersey", caption_en: "Jersey mockup" },
+      { src: "assets/img/zr-photoshop-4x3.webp", caption: "Diseño en Photoshop", caption_en: "Design in Photoshop" },
+      { src: "assets/img/zr-moldes-4x3.webp", caption: "Moldes en Illustrator", caption_en: "Patterns in Illustrator" }
     ] }
 ];

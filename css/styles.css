@@ -132,3 +132,4 @@ button.project-cycle{cursor:pointer}
 #proyectos .grid > .project:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:calc(50% - .75rem)}@media (max-width:760px){#proyectos .grid > .project:last-child:nth-child(odd){width:auto;justify-self:stretch}}
 #proyectos .card-actions{justify-content:flex-start;gap:.5rem}#proyectos .card-actions .card-ig:first-of-type{margin-left:auto}
 .logo{display:inline-flex;align-items:center;color:var(--fg);line-height:0}.logo svg{height:14px;width:auto;display:block}@media (max-width:520px){.logo svg{height:12px}}
+#proyectos .project-body p.subtitle{flex:0;font-size:.85rem;font-style:italic;color:var(--muted);margin-top:-.45rem}

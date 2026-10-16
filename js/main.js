@@ -18,7 +18,7 @@
       return `
     <article class="card project reveal visible">
       ${media}
-      <div class="project-body"><h3>${esc(t.title)}${p.badge ? ` <span class="badge">${esc(lang === 'en' ? p.badge.en : p.badge.es)}</span>` : ''}</h3><p>${esc(t.description)}</p>
+      <div class="project-body"><h3>${esc(t.title)}${p.badge ? ` <span class="badge">${esc(lang === 'en' ? p.badge.en : p.badge.es)}</span>` : ''}</h3>${t.subtitle ? `<p class="subtitle">${esc(t.subtitle)}</p>` : ''}<p>${esc(t.description)}</p>
       ${p.credit ? `<p class="credit">${esc(lang === 'en' ? p.credit.before_en : p.credit.before)}<a href="${esc(p.credit.url)}" target="_blank" rel="noopener">${esc(p.credit.handle)}</a>${esc(lang === 'en' ? p.credit.after_en : p.credit.after)}</p>` : ''}
       <ul class="tags">${t.tags.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
       <div class="card-actions">${p.gallery ? `<button class="link project-open" data-idx="${i}">${ui['gal.view']}</button>` : ''}
