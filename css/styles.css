@@ -139,3 +139,8 @@ img.xf{position:absolute;opacity:0;transform:scale(1.02);transition:opacity .42s
 img.xf.in{opacity:1;transform:none}
 #proyectos .project-img img:not(.xf){transition:none}
 @media (prefers-reduced-motion:reduce){img.xf{transition:none}}
+#proyectos .card-actions .card-ig{margin-left:0}#proyectos .card-actions .project-open{margin-right:auto;cursor:pointer}
+@media (hover:hover) and (pointer:fine){#proyectos .project-cycle img:not(.xf){transition:transform .4s ease}#proyectos .project-cycle:hover img:not(.xf),#proyectos .project-cycle:hover img.xf.in{transform:scale(1.05)}#proyectos .project-cycle img.xf{transition:opacity .42s ease,transform .42s ease}}
+@media (prefers-reduced-motion:reduce){#proyectos .project-cycle img:not(.xf){transition:none}#proyectos .project-cycle:hover img:not(.xf),#proyectos .project-cycle:hover img.xf.in{transform:none}}
+#proyectos button.social{padding:0;font:inherit}
+#proyectos .card-actions .card-ig.card-ig:first-of-type{margin-left:0}
