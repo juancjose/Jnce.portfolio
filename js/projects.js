@@ -28,7 +28,7 @@ const PROJECTS = [
       { src: "assets/img/rvc-blanca-moldes-4x3.webp", caption: "Moldes en Illustrator", caption_en: "Patterns in Illustrator" }
     ] },
   { title: "KRC", description: "Jersey y enterito de triatlón y running para KRC (Kalos Running): mockups y moldes en Illustrator listos para sublimación, y prenda final producida.",
-    tags: ["Sublimación", "Moldes", "Illustrator"], image: "assets/img/krc-foto-bici-4x3.webp", link: "",
+    tags: ["Sublimación", "Moldes", "Illustrator"], image: "assets/img/krc-foto-bici-4x3.webp", link: "", instagram: "https://www.instagram.com/kalosrunning/",
     credit: { before: "Diseño de trama: ", after: ". Mockups y moldería: propios.", before_en: "Print design: ", after_en: ". Mockups and patterns: mine.", handle: "@glendamorahan", url: "https://www.instagram.com/glendamorahan/" },
     en: { title: "KRC", description: "Triathlon and running jersey and trisuit for KRC (Kalos Running): mockups and patterns in Illustrator ready for sublimation, plus the final produced garment.", tags: ["Sublimation", "Patterns", "Illustrator"] },
     gallery: [
