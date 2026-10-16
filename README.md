@@ -1,37 +1,30 @@
-# Portfolio — Juan José Cáceres · Diseñador Gráfico
+# Juan José Cáceres — Portfolio
 
-Sitio estático (HTML + CSS + JS, sin build). Abrí `index.html` en el navegador para verlo.
+**Diseñador gráfico · Indumentaria y deportiva**
 
-## Estructura
-```
-index.html          Contenido principal
-css/styles.css      Estilos (colores en :root y [data-theme=dark])
-js/projects.js      Lista de trabajos (editar acá)
-js/main.js          Tema claro/oscuro, menú, animaciones
-assets/docs/        PDFs descargables (CV, presentaciones)
-assets/img/         Imágenes de proyectos
-.nojekyll           Para GitHub Pages
-```
+![CHIMANTEAM — mockup de enterito deportivo sublimado](assets/img/chimanteam%20mockup.webp)
 
-## Cómo editar
-1. Buscá `[EDITAR]` en `index.html` y reemplazá con tus datos (rol, intro, experiencia, habilidades, email, WhatsApp, LinkedIn).
-2. **Trabajos:** editá el array `PROJECTS` en `js/projects.js`:
-   ```js
-   { title: "Mi proyecto", description: "Qué hace", tags: ["React"], image: "assets/img/proyecto.png", link: "https://..." }
-   ```
-3. **Archivos:** copiá tus PDFs a `assets/docs/` con los nombres usados en `index.html` (ej. `CV-Juan-Jose-Caceres.pdf`, `presentacion.pdf`) o cambiá los `href`.
-4. **Colores:** cambiá `--accent` y `--accent2` en `css/styles.css`.
+## Sobre mí
 
-## Publicar con GitHub Pages
-1. Repositorio: https://github.com/juancjose/Jnce.portfolio
-2. Para subir cambios (o clonar y subir desde cero):
-   ```bash
-   git init && git add . && git commit -m "Portfolio inicial"
-   git branch -M main
-   git remote add origin https://github.com/juancjose/Jnce.portfolio.git
-   git push -u origin main
-   ```
-3. En el repo: **Settings → Pages → Source: Deploy from a branch → `main` / `(root)`** → Save.
-4. En 1–2 minutos queda online en **https://juancjose.github.io/Jnce.portfolio/**
+Diseñador gráfico con más de 10 años de experiencia. Empecé en Gráfica Espacio diseñando impresos comerciales, pasé cinco años en Cozysport como operador de plotter de impresión y corte, y hoy diseño indumentaria y prendas deportivas para la misma empresa, desde la gráfica hasta el armado de cada pieza lista para producción.
 
-> Ojo: no subas documentos con datos sensibles (DNI, dirección, teléfono personal) si el repo es público.
+## Contenido del sitio
+
+- **Inicio** — presentación y accesos directos a trabajos, CV y WhatsApp.
+- **Sobre mí** — trayectoria, ubicación, especialidad e idiomas.
+- **Experiencia** — Gráfica Espacio y Cozysport, de 2014 a la actualidad.
+- **Trabajos** — proyectos con galería de imágenes, como CHIMANTEAM.
+- **Habilidades** — diseño, herramientas y habilidades blandas.
+- **Archivos** — CV descargable en PDF.
+- **Contacto** — email, WhatsApp, LinkedIn y GitHub.
+
+## Tecnología
+
+HTML, CSS y JavaScript. Disponible en español e inglés, con modo claro y oscuro.
+
+## Contacto
+
+- Email: [juanjosecaceres95@gmail.com](mailto:juanjosecaceres95@gmail.com)
+- WhatsApp: [wa.me/5491133122743](https://wa.me/5491133122743)
+- LinkedIn: [juan-caceres-3677b323b](https://www.linkedin.com/in/juan-caceres-3677b323b)
+- GitHub: [juancjose](https://github.com/juancjose)
