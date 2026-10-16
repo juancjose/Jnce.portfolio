@@ -4,7 +4,12 @@ const I18N = {
   "lang.btn": "EN",
   "lang.aria": "Switch to English",
   "proj.view": "Ver proyecto →",
-  "proj.alt": "Imagen de "
+  "proj.alt": "Imagen de ",
+  "gal.open": "Abrir galería: ",
+  "gal.view": "Ver galería →",
+  "gal.close": "Cerrar",
+  "gal.prev": "Anterior",
+  "gal.next": "Siguiente"
  },
  "en": {
   "skip": "Skip to content",
@@ -60,6 +65,11 @@ const I18N = {
   "lang.btn": "ES",
   "lang.aria": "Cambiar a español",
   "proj.view": "View project →",
-  "proj.alt": "Image of "
+  "proj.alt": "Image of ",
+  "gal.open": "Open gallery: ",
+  "gal.view": "View gallery →",
+  "gal.close": "Close",
+  "gal.prev": "Previous",
+  "gal.next": "Next"
  }
 };

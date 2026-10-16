@@ -87,3 +87,17 @@ footer{padding:2rem 0;text-align:center;color:var(--muted);border-top:1px solid 
 /* Botón de idioma */
 .lang-btn{border-radius:50%;font-size:.72rem;font-weight:600;letter-spacing:.06em}
 .icon-btn#theme-toggle{border-radius:50%}
+
+/* Galería de proyectos */
+button.project-img{border:0;padding:0;width:100%;cursor:zoom-in;background:var(--bg2)}
+#proyectos .project-img img{object-fit:cover}
+.project-body button.link{background:none;border:0;padding:0;font:inherit;font-weight:600;cursor:pointer;text-align:left}
+.lightbox{position:fixed;inset:0;z-index:100;background:rgba(5,8,15,.92);display:flex;align-items:center;justify-content:center;gap:1rem;padding:2rem}
+.lightbox[hidden]{display:none}
+.lightbox figure{margin:0;max-width:min(1200px,86vw);text-align:center}
+.lightbox img{max-width:100%;max-height:80vh;border-radius:8px;display:block;margin:auto}
+.lightbox figcaption{color:#cbd5e1;font-size:.85rem;margin-top:.9rem;letter-spacing:.02em}
+.lightbox button{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;font-size:1.4rem;line-height:1;cursor:pointer;transition:background .2s,color .2s}
+.lightbox button:hover,.lightbox button:focus-visible{background:#fff;color:#0b0f19}
+.lb-close{position:absolute;top:1.2rem;right:1.2rem}
+@media (max-width:600px){.lb-prev,.lb-next{position:absolute;bottom:1.2rem}.lb-prev{left:30%}.lb-next{right:30%}}
