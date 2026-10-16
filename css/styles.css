@@ -113,3 +113,8 @@ button.project-cycle{cursor:pointer}
 .lightbox img{object-fit:contain;cursor:pointer}
 #proyectos .project-img:has(img) img{position:absolute;inset:0;width:100%;height:100%}
 .dots{z-index:1;padding:4px 7px;border-radius:999px;background:color-mix(in srgb,var(--bg) 55%,transparent)}
+
+/* Fotos uniformes en tarjeta + una sola tarjeta centrada */
+#proyectos .project-img:has(img){aspect-ratio:4/3}
+#proyectos .project-img img{object-fit:cover;object-position:center}
+#proyectos .grid:has(> .project:only-child){grid-template-columns:minmax(0,640px);justify-content:center}
